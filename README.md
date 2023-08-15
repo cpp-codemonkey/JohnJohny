@@ -16,7 +16,7 @@ which is not legal C++. Also, functions have to be outside of the main function.
 4) In first function initialized the double J to 0.0 since Visual C++ complained and treated this warning as an error. Not initializing it was wrong anyway.
 5) Converted for loop to a range based for loop (this is the modern way) and made the element retrieved, i, constant since we're not altering it.
 6) In VectorAverage's return statement, added a static_cast to double to avoid warnings about implicit narrowing conversions etc.
-7) Made the parameter v a const reference (const&). Otherwise when called, the entire passed vector will be compied - inefficient.
+7) Made the parameter v a const reference (const&). Otherwise when called, the entire passed vector will be copied - inefficient.
 8) Added missing semi-colon to J += i
 9) For VectorStandardDeviation, converted the parameter to a const reference (see 7).
 10) J was undeclared so declared it and initialized to 0.0.
