@@ -21,7 +21,7 @@ which is not legal C++. Also, functions have to be outside of the main function.
 9) For VectorStandardDeviation, converted the parameter to a const reference (see 7).
 10) J was undeclared so declared it and initialized to 0.0.
 11) Pre-calculated the average of the vector using the function VectorAverage. Otherwise you're recalculating the same thing around the loop - inefficient.
-12) Instead of (v.at(i) - AverageOfV) * (v.at(i) - AverageOfV) you could do this: pow(v.at(i) - AverageOfV), 2) and would need the <cmath> header but I didn't do that.
+12) Instead of (v.at(i) - AverageOfv) * (v.at(i) - AverageOfv) you could do this: pow(v.at(i) - AverageOfv), 2) and would need the <cmath> header but I didn't do that.
 13) In the return statement did another static_cast to avoid implicit conversions. Also made the loop variable i a size_t because the vector<T>::size() function returns that instead of an integer.
 14) Renamed S to SquareOfLast. Not sure what this function was supposed to do but the origianl suspiciously looked like it returned the square root of the last element.
 15) In main converted foreign language prompts (Georgian?) to English for my convenience only.
